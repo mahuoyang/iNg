@@ -50,13 +50,13 @@ proxy-groups:
   - {name: 🌐 全部节点, type: select, include-all: true}
 rules:
   - RULE-SET,private_domain,🟢 直连
-  - RULE-SET,回家_domain,🏠 回家
+  - RULE-SET,home_domain,🏠 回家
   - RULE-SET,apple_domain,🍎 苹果
   - RULE-SET,proxylite,🚀 节点选择
   - RULE-SET,ai,🤖 ChatGPT
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,YouTube_domain,📹 油管
-  - RULE-SET,google_domain,🍀 谷歌
+  - RULE-SET,Google_domain,🍀 谷歌
   - RULE-SET,onedrive_domain,🐬 OneDrive
   - RULE-SET,Microsoft_domain,🪟 微软
   - RULE-SET,tiktok_domain,🎵 TikTok
@@ -64,9 +64,9 @@ rules:
   - RULE-SET,netflix_domain,🎥 奈飞
   - RULE-SET,geolocation-!cn,🚀 节点选择
   - RULE-SET,cn_domain,🎯 全球直连
-  - RULE-SET,google_ip,🍀 Google,no-resolve
-  - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
-  - RULE-SET,telegram_ip,📲 Telegram,no-resolve
+  - RULE-SET,google_ip,🍀 谷歌,no-resolve
+  - RULE-SET,netflix_ip,🎥 奈飞,no-resolve
+  - RULE-SET,telegram_ip,📲 电报,no-resolve
   - RULE-SET,cn_ip,🎯 全球直连
   - MATCH,🐟 漏网之鱼
 rule-anchor:
@@ -75,7 +75,7 @@ rule-anchor:
   qcy: &qcy {type: http, interval: 86400, behavior: domain, format: text}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
-  回家_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/mahuoyang/iNg/refs/heads/main/Rules/home.mrs"}
+  home_domain: {!!merge <<: *class, url: "https://raw.githubusercontent.com/mahuoyang/clash/refs/heads/main/home.list"}
   private_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   proxylite: {!!merge <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/ProxyLite.list"}
   ai: {!!merge <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/AI.list"}
