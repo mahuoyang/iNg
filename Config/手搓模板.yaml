@@ -33,6 +33,7 @@ proxy-groups:
   - {name: 🎵 TikTok,!!merge <<: *pr}
   - {name: 📲 电报,!!merge <<: *pr}
   - {name: 🎥 奈飞,!!merge <<: *pr}
+  - {name: 🏠 回家,!!merge <<: *pr}
   - {name: 🍎 苹果, type: select, proxies: [🟢 直连, 🚀 节点选择]}
   - {name: 🎯 全球直连, type: select, proxies: [🟢 直连, 🚀 节点选择]}
   - {name: 🐟 漏网之鱼,!!merge <<: *pr}
