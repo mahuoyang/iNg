@@ -51,7 +51,7 @@ proxy-groups:
 rules:
   - RULE-SET,private_domain,🟢 直连
   - RULE-SET,回家_domain,🏠 回家
-  - RULE-SET,apple_domain,🍎 Apple
+  - RULE-SET,apple_domain,🍎 苹果
   - RULE-SET,proxylite,🚀 节点选择
   - RULE-SET,ai,🤖 ChatGPT
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
